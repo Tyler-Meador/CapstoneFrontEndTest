@@ -1,0 +1,57 @@
+.Accounts {
+    padding: 40px 0px 75px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    margin-left: 150px;
+    margin-right: 190px;
+    margin-bottom: 50px;
+    color: #1c2237;
+    border-radius: 10px;
+    background: #fafafa;
+
+}
+
+.title {
+    padding: 20px 0px 20px 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background: #fafafa;
+    margin-left: 150px;
+    margin-right: 190px;
+    margin-bottom: 10px;
+    color: #1c2237;
+    border-radius: 10px;
+}
+
+.ActiveRequests {
+    padding: 40px 0px 75px 350px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    background: #fafafa;
+    margin-left: 150px;
+    margin-right: 190px;
+    margin-bottom: 50px;
+    color: #1c2237;
+    border-radius: 10px;
+}
+
+.RequestHistory {
+    padding: 40px 0px 75px 350px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    background: #fafafa;
+    margin-left: 150px;
+    margin-right: 190px;
+    margin-bottom: 0px;
+    color: #1c2237;
+    border-radius: 10px;
+}
+
+.background {
+    background: #264b02;
+}
