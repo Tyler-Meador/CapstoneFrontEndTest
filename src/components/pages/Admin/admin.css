@@ -30,7 +30,7 @@
     padding: 40px 0px 75px 350px;
     display: flex;
     flex-direction: column;
-    align-content: space-around;
+    align-content: space-evenly;
     background: #fafafa;
     margin-left: 150px;
     margin-right: 190px;

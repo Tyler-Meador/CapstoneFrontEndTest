@@ -9,7 +9,7 @@ import { GiCrystalize } from 'react-icons/gi';
 function RequestCard(props){
     console.log(props);
     return(
-        <div>
+        <div className="test">
             <div className="request-card">
                 <h2>Request Type: {props.requestType}</h2>
                 <h3>Account Type: {props.accountType}</h3>
@@ -23,7 +23,8 @@ function RequestCard(props){
             </div>
 
             <div className="buttons">
-                <Button buttonColor='primary' buttonSize='btn--wide'>Approve</Button><Button buttonColor='primary' buttonSize='btn--wide'>Deny</Button>
+                <Button buttonColor='primary' buttonSize='btn--wide'>Approve</Button>
+                <Button buttonColor='primary' buttonSize='btn--wide'>Deny</Button>
             </div>
             
         </div>
