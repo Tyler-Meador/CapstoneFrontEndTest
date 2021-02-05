@@ -1,0 +1,359 @@
+.HeroContainer {
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0px;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.HeroContainerDash {
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.HeroBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.VideoBg-world{
+        width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #232a34;
+}
+
+
+
+
+
+.VideoBg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #232a34;
+}
+
+
+.HeroContent {
+    z-index: 3;
+    max-width: 1200px;
+    position: absolute;
+    padding: 8px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.HeroH1 {
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+}
+
+
+
+.HeroH2 {
+    color: rgb(0, 255, 229);
+    margin-top: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+
+
+.HeroP{
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+
+.pricing__container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.pricing__container-cardInfo {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 18px;
+    align-items: right;
+    color: #fff;
+}
+
+
+
+
+
+.TransLimit__container-card {
+    background: linear-gradient(45deg, #264b02 0%, #05c102 100%);
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    width: 480px;
+    height: 280px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+
+.TransLimit__container-card:nth-child(2) {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #777877 0%, #646564 100%);
+    margin: 0 20px;
+}
+
+
+.TransLimit__container-card:hover {
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+    color: #1c2237;
+}
+
+.TransLimit__container-cardInfo {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 15px;
+    align-items: center;
+    color: #fff;
+}
+
+
+.TransLimit__container-cardInfo h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+.TransLimit__container-cardInfo h4 {
+    font-size: 30px;
+}
+
+
+.TransLimit__container-cardInfo p {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+
+
+.TMButton{
+    margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+.Accounts__container-cardInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    padding: 15px;
+    margin-top: 20px;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+.UseableFunds__container-cardInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-top: 20px;
+    align-items: left;
+    color: rgb(0, 0, 0);
+    
+}
+
+.UseableFunds__container-card {
+    background: linear-gradient(180deg, #c4c3c3 0%, #a9a8a8 100%);
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    width: 800px;
+    height: 280px;
+    text-decoration: none;
+    border-radius: 30px;
+    
+}
+
+
+.Transaction__container-card {
+    background: linear-gradient(180deg, #c4c3c3 0%, #a9a8a8 100%);
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    width: 500px;
+    height: 280px;
+    text-decoration: none;
+    border-radius: 30px;
+    
+}
+
+
+
+
+
+.Accounts__container-card {
+    background: linear-gradient(45deg, #c1c1c1 0%, #909090 100%);
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    width: 280px;
+    height: 280px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+.UseableFunds__container-card:nth-child(2) {
+    transform: scale(1.05);
+    background: #4f4d4d;
+    margin: 0 20px;
+}
+
+
+.UseableFunds__container-card:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-out;
+    color: #1c2237;
+}
+
+
+
+.Transfer_Money_Button{
+    margin-left: 50px;
+    
+}
+
+
+
+
+.Accounts_UsableFunds p {
+    margin-top: 5px;
+
+    font-size: 15px;
+    align-content: right;
+    color: #000000;
+    
+}
+
+.Accounts_UsableFunds h4 {
+    font-size: 30px;
+    color: #117b01;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.RightSide_UsableFunds p {
+    margin-top: 5px;
+    margin-bottom: 24px;
+    margin-left: 650px;
+    font-size: 15px;
+    align-content: right;
+    color: #000000;
+    
+}
+
+.RightSide_UsableFunds h4 {
+    font-size: 40px;
+    color: #117b01;
+    margin-left: 564px;
+    
+}
+
+
+
+.UseableFunds__container-cardInfo h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+.UseableFunds__container-cardInfo h4 {
+    font-size: 50px;
+}
+
+.UseableFunds__container-cardInfo h1 {
+    font-size: 35px;
+}
+
+
+
+.UseableFunds__container-cardInfo p {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .HeroH1{
+        font-size: 40px;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    .HeroH1{
+        font-size: 32px;
+    }
+    
+}
+
+

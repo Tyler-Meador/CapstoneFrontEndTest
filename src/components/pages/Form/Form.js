@@ -21,7 +21,7 @@ const Form = () => {
 
                 <div className='form-content-left'>
 
-                    <img className='image-form' src='images/login_1.svg' alt='LoginImage'  />
+                    <img className='image-form' src='images/undraw_enter_uhqk.svg' alt='LoginImage'  />
 
                 </div>
                 {!isSubmitted ? (

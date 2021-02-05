@@ -25,6 +25,11 @@
     transition: all 0.3s ease-out;
 }
 
+.btn--tiny {
+    padding: 8px 20px;
+    font-size: 10px;
+    
+}
 
 .btn--medium {
     padding: 8px 20px;
@@ -66,13 +71,13 @@
 
 .btn--wide:hover {
     color: #fff;
-    background-color: #1dc903;
+    background-color: #63c402 ;
     transition: all 0.2s ease-out;
 }
 
 
 .blue {
-    background-color: #276afb;
+    background-color: #117b01;
     color: #fff;
     border:none;
 }
@@ -103,6 +108,13 @@
 
 .green {
     background-color: #25ce4a;
+    color: #fff;
+    border:none;
+}
+
+
+.darkgreen {
+    background-color: #117b01;
     color: #fff;
     border:none;
 }

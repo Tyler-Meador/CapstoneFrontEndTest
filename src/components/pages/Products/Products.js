@@ -1,13 +1,14 @@
 import React from 'react'
 import HeroSection from '../../HeroSection'
 //pulling data properties 
-import { homeObjTwo } from './Data'
+import { homeObjOne, homeObjTwo  } from './Data'
 //import Pricing from '../../Pricing';
 
 function Products() {
     return (
         <>
             <HeroSection { ...homeObjTwo} />
+            <HeroSection { ...homeObjOne} />
         </>
     )
 }

@@ -65,7 +65,7 @@ const { handleChange, values, handleSubmit, errors } = useForm(submitForm, valid
 
 
 
-                <button className="form-input-btn" type='submit'>Login</button>
+                <button className="form-input-btn" type='submit'>LOGIN</button>
 
                 <span className="form-input-login"> Don't have an account? Register <a href="/login"> here!</a>
                 </span>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Collapsible from 'react-collapsible';
 import AccountCard from './AccountCard';
 import accountData from './AccountData';
 import RequestCard from './RequestCard';
@@ -16,7 +17,8 @@ class Admin extends React.Component {
         this.state={
             accounts: accountData,
             requests: requestData,
-            history: historyData
+            history: historyData,
+
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -35,7 +37,7 @@ class Admin extends React.Component {
         })
 
     }
-   
+    
     render(){
 
         const accountComponents = this.state.accounts.map(account => {
@@ -59,20 +61,26 @@ class Admin extends React.Component {
 
 
                 <div className="foreground">
-                    <h1 className="title">Active Accounts</h1>
-                    <div className="Accounts">
-                        {accountComponents}
-                    </div>
-        
-                    <h1 className="title">Current Requests</h1>
-                    <div className="ActiveRequests">
-                        {requestComponents}
-                    </div>
+                    <Collapsible trigger="Administrator Panel" open="true" className="t">
+                        <div className="Accounts">
+                            {accountComponents}
+                        </div>
+                    </Collapsible>
 
-                    <h1 className="title">Request History</h1>
-                    <div className="RequestHistory">
-                        {historyComponents}
-                    </div>
+
+        
+                    <Collapsible trigger="Active Requests" open="true">
+                        <div className="ActiveRequests">
+                            {requestComponents}
+                        </div>
+                    </Collapsible>
+
+                    <Collapsible trigger="Request History" open="true">
+                        <div className="RequestHistory">
+                            {historyComponents}
+                        </div>
+                    </Collapsible>
+
                 </div>
                 
 
