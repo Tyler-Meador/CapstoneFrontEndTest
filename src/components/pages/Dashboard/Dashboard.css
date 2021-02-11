@@ -1,3 +1,5 @@
+
+
 .HeroContainer {
     background: #0c0c0c;
     display: flex;
@@ -74,6 +76,9 @@
     color: #fff;
     font-size: 48px;
     text-align: center;
+    text-shadow: 4px 4px #041100;
+
+    
 }
 
 
@@ -95,6 +100,31 @@
     font-size: 24px;
     text-align: center;
 }
+
+
+
+
+
+
+.Top-card-title {
+    color: #00630f;
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+
+.Top-card-text{
+    color: #00630f;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
 
 
 
@@ -234,12 +264,13 @@
 
 
 .Accounts__container-card {
-    background: linear-gradient(45deg, #c1c1c1 0%, #909090 100%);
+    background: linear-gradient(45deg, #ebebeb 0%, #ebe9e9 100%);
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
     width: 280px;
     height: 280px;
     text-decoration: none;
     border-radius: 30px;
+    
 }
 
 
@@ -268,6 +299,11 @@
     
 }
 
+
+.transctions.h2{
+    color:#065902;
+    
+}
 
 
 
@@ -357,3 +393,225 @@
 }
 
 
+
+
+
+
+
+
+
+
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.dashboard-btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+}
+
+.dashboard-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.ListCards {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+    
+}
+
+
+
+
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.total.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+
+.CLEARcard_content {
+    padding: 1rem;
+    width:500px;
+    
+    background: transparent;
+    
+    border-radius: 20px;
+}
+
+
+
+.card_content {
+    padding: 1rem;
+    width:500px;
+    
+    background: linear-gradient(to bottom left, #e9e7e7 40%, #cecdcd 100%);
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.total.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left,  #35bab1 40%, #11939a 100%);
+}
+
+
+
+.card_title {
+    color: #3e3e3e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: #545353;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+}
+
+
+
+.card_image{
+    height: 300px;
+    resize:vertical;
+    padding: 10px;
+}
+
+
+.card_text2 {
+    color: #2d9103;
+    font-size: 45px;
+    line-height: 1.5;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;    
+    font-weight: 400;
+}
+
+
+
+.currentCards1{
+    padding: 50px;
+    margin-left: 200px;
+    margin-right: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.card {
+    flex-direction: row;
+    align-items: center;
+}
+.card-title {
+    font-weight: bold;
+}
+.card img {
+    width: 30%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+}
+@media only screen and (max-width: 768px) {
+    a {
+        display: none;
+    }
+    .card-body {
+        padding: 0.5em 1.2em;
+    }
+    .card-body .card-text {
+        margin: 0;
+    }
+    .card img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .card img {
+        width: 40%;
+    }
+}

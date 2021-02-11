@@ -12,10 +12,10 @@ export default function validateInfo(values) {
 // SHOWS email required - Long code will force an email format
 // if no value it will say email required 
 //if value is not in the right format then it will say INVALID
-    if(!values.email) {
-        errors.email = "Email required"
-    } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-        errors.email = "Email address is invalid"
+    if(!values.username) {
+        errors.username = "Email required"
+    } else if(values.username.length < 6) {
+        errors.username = "Username needs to be 6 characters or more"
     }
 
 //PASSWORD
@@ -37,3 +37,14 @@ export default function validateInfo(values) {
     return errors;
 
 }
+
+
+
+/*
+if(!values.username) {
+    errors.username = "Email required"
+} else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+    errors.email = "Email address is invalid"
+}
+
+*/

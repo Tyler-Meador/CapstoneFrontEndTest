@@ -2,12 +2,11 @@ import { useState, useEffect} from 'react';
 
 // Use Form 
 //pass validate as a parameter 
+
 const useForm = (callback, validate) => {
-    const [values, setValues] = useState({
+ const [values, setValues] = useState({
         username: '',
-        email: '',
-        password: '',
-        password2: ''
+        password: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -24,6 +23,7 @@ const useForm = (callback, validate) => {
             // above replaces this e.target.name: e.target.value
         });
     };
+
 
 //prevents the restart of the page after login 
     const handleSubmit = e => {

@@ -20,9 +20,7 @@ const DashboardElements = () => {
                 <h1 className='HeroH1'>
                     Merit Bank Dashboard
                 </h1>
-                <h2 className='HeroH2'>
-                    WELCOME MICHELLE
-                </h2>
+             
             </div>
         </div>
 

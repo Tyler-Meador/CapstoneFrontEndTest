@@ -5,10 +5,13 @@ import { AiTwotoneBank } from 'react-icons/ai';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from './Button';
 import './Navbar.css';
+import { connect } from 'react-redux'
+import { logout } from '../redux/Login/LoginActions'
+import { userLogout } from '../redux/User/UserActions'
 //contact API - can pass in properties / in this case changing the icon colors
 import { IconContext } from 'react-icons/lib'
 
-function Navbar() {
+function Navbar({loginStatus, test, userLoaded, logout, userLogout}) {
 // showcases the hamburger bar menu
     const [click, setClick] = useState(false)
 
@@ -79,17 +82,29 @@ function Navbar() {
                         </Link>
                     </li>
 
+                    <li className="nav-item"> 
+                        {userLoaded ? (
+                            <Link to='/dashboard' className="nav-links" onClick={closeMobileMenu}>
+                                DASHBOARD 
+                            </Link>
+                        ):( null )
+
+                        }
+
+                    </li>
+
                     <li className="nav-btn">
                         {button ? (
-                            <Link to='/login' className="btn-link">
-                                <Button buttonStyle='btn--outline'>
-                                    LOGIN
+                            <Link to={test} className="btn-link">
+                                <Button buttonStyle='btn--outline' onClick={loginStatus === 'LOGOUT' ? {logout} : null}>
+                                    {loginStatus}
                                 </Button>
                             </Link>
                         ): (
-                            <Link to='/login' className='btn-link' onClick={closeMobileMenu}>
+                            <Link to={test} className='btn-link' onClick={closeMobileMenu}>
                                 <Button buttonStyle='btn--outline' buttonSize='btn--mobile'>
-                                    LOGIN  
+                                    
+                                    {loginStatus}
                                 </Button>
                             </Link>
                         )
@@ -104,5 +119,19 @@ function Navbar() {
         </>
     );
 }
+const mapStateToProps = state => {
+    return {
+        test: state.Login.test,
+        loginStatus: state.Login.loginStatus,
+        userLoaded: state.User.userLoaded
+    }
+}
 
-export default Navbar
+const mapDispatchToProps = dispatch => {
+    return {
+        logout: () => dispatch(logout()),
+        userLogout: () => dispatch(userLogout())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

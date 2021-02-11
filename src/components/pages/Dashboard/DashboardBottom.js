@@ -10,10 +10,45 @@ import { IconContext } from 'react-icons/lib';
 import './Dashboard.css';
 
 
+
 function DashboardBottom() {
     return (
+
+
+
+
+
+
+
+
+
+
+        
         <IconContext.Provider value={{ color: '#fff', size: 30 }}>
             <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div className="pricing__section">
                     <div className="pricing__wrapper">
 
@@ -37,7 +72,7 @@ function DashboardBottom() {
 
                                 <div className='Transfer_Money_Button'>
                                     <Button buttonSize='btn--tiny' buttonColor='blue'>
-                                        >
+                                        arrrrow
                                 </Button>
                                 </div>
 
@@ -65,7 +100,7 @@ function DashboardBottom() {
 
 
                                     <Button buttonSize='btn--tiny' buttonColor='blue'>
-                                        >
+                                        arrrrow
                                 </Button>
                                 </div>
                             </Link>
@@ -74,13 +109,39 @@ function DashboardBottom() {
 
 
 
+                            
+
+
+
+
+
+
+
 
 
                         </div>
+
+
+
+
+
+
+                        
                     </div>
                 </div>
             </div>
         </IconContext.Provider>
+
+
+
+
+
+
+
+
+
+
+
     );
 }
 

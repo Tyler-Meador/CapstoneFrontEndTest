@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import FormSignup from './FormSignup';
 import FormSuccess from './FormSuccess';
 import './Form.css';
+import { connect } from 'react-redux'
 
 // line28: if its not submitted if thats true then display formsignup and pass in submitform equal to submitform ELSE form submitted pass formsucess
 
-const Form = () => {
+const Form = ({isLoggedIn}) => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+    
 
     //function submit to true
     function submitForm() {
+        console.log(isLoggedIn)
+        
         setIsSubmitted(true);
     }
 
@@ -24,7 +28,7 @@ const Form = () => {
                     <img className='image-form' src='images/undraw_enter_uhqk.svg' alt='LoginImage'  />
 
                 </div>
-                {!isSubmitted ? (
+                {!isLoggedIn ? (
                 <FormSignup submitForm={ submitForm } />
                 ) : (
                 <FormSuccess />
@@ -34,4 +38,16 @@ const Form = () => {
     );
 };
 
-export default Form;
+const mapStateToProps = state => {
+    return {
+        isLoggedIn: state.Login.isLoggedIn
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return { 
+      
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
