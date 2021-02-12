@@ -2,9 +2,6 @@
   "name": "merit_bank",
   "version": "0.1.0",
   "private": true,
-  "engines":{
-	"node": ">=12.0.0"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
