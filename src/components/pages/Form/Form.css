@@ -43,7 +43,7 @@
   width: 60%;
   height: 60%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -145,10 +145,10 @@
 
 
 .form-input-btn-success {
-  width: 200px;
-  height: 50px;
-  margin-top: 300px;
-  margin-left: 150px;
+  width: 20%;
+  height: 8%;
+  margin-top: 35%;
+  margin-left: 40%;
   border-radius: 2px;
   background: linear-gradient(
     90deg,
