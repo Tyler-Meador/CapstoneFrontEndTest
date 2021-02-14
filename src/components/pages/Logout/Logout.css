@@ -1,0 +1,29 @@
+.Logoutimage{
+    
+    width: 700px;
+    padding: 20px;
+    
+    margin: auto;
+   
+}
+
+
+
+.Logout h1{
+    padding:10px;
+    margin: auto;
+    font-size: 70px;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 32%;
+}
+
+
+.Logout h3{
+    margin-left: 22%;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-size: 30px;
+    font-style: italic;
+}

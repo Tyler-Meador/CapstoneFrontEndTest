@@ -1,4 +1,4 @@
-import { FETCH_SAVINGS_FAILURE, FETCH_SAVINGS_REQUEST, FETCH_SAVINGS_SUCCESS } from "./BalanceTypes"
+import { FETCH_ROLLOVER_FAILURE, FETCH_ROLLOVER_REQUEST, FETCH_ROLLOVER_SUCCESS } from "./BalanceTypes"
 
 const initialState = {
     loading: false,
@@ -8,18 +8,18 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type){
-        case FETCH_SAVINGS_REQUEST:
+        case FETCH_ROLLOVER_REQUEST:
             return{
                 ...state,
                 loading: true
             } 
-        case FETCH_SAVINGS_SUCCESS:
+        case FETCH_ROLLOVER_SUCCESS:
             return{
                 loading: false,
                 balance: action.payload,
                 error: ''
             }
-        case FETCH_SAVINGS_FAILURE:
+        case FETCH_ROLLOVER_FAILURE:
             return {
                 loading: false,
                 balance: 0,

@@ -2,7 +2,7 @@ import { FETCH_CD_FAILURE, FETCH_CD_REQUEST, FETCH_CD_SUCCESS } from "./BalanceT
 
 const initialState = {
     loading: false,
-    checkingBalance: 10,
+    balance: 0.00,
     error: ''
 }
 

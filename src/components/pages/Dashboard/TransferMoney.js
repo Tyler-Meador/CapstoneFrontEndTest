@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import styled from 'styled-components';
 import { Modal } from './TransferMoneyModal';
 
@@ -30,6 +30,8 @@ function TransferMoney() {
     const openModal = () => {
         setShowModal(prev => !prev);
     };
+
+
 
     return (
         <>

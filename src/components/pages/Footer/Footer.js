@@ -70,9 +70,8 @@ function Footer() {
                 <div className='social-media-wrap'>
                     <div className='footer-logo'>
                         <Link to='/' className='social-logo'>
-                            <AiOutlineBank className='navbar-icon' />
-                MERIT BANK
-            </Link>
+                            <img src='images/Flogo_NavBar.png' className="img-top" />
+                        </Link>
                     </div>
                     <small className='website-rights'>Merit Bank © 2021</small>
                     <div className='social-icons'>

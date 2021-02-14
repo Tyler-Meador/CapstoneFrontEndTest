@@ -1,28 +1,32 @@
-import { FETCH_SAVINGS_FAILURE, FETCH_SAVINGS_REQUEST, FETCH_SAVINGS_SUCCESS } from "./BalanceTypes"
+
+import { FETCH_TRANSACTION_FAILURE, FETCH_TRANSACTION_REQUEST, FETCH_TRANSACTION_SUCCESS } from "./TransactionTypes"
 
 const initialState = {
-    loading: false,
-    balance: 0.00,
+    success: null,
+    loading: null,
+    transaction: [],
     error: ''
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type){
-        case FETCH_SAVINGS_REQUEST:
+        case FETCH_TRANSACTION_REQUEST:
             return{
                 ...state,
                 loading: true
             } 
-        case FETCH_SAVINGS_SUCCESS:
+        case FETCH_TRANSACTION_SUCCESS:
             return{
+                success: true,
                 loading: false,
-                balance: action.payload,
+                transaction: action.payload,
                 error: ''
             }
-        case FETCH_SAVINGS_FAILURE:
+        case FETCH_TRANSACTION_FAILURE:
             return {
+                success: false,
                 loading: false,
-                balance: 0,
+                transaction: [],
                 error: action.payload,
             }
         default: return state

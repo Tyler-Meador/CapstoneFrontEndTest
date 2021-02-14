@@ -1,11 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { FaFire } from 'react-icons/fa'
-import { Button } from '../../Button'
-import { BsXDiamondFill } from 'react-icons/bs';
-import { GiCrystalize } from 'react-icons/gi';
-import { RiSafeLine } from 'react-icons/ri';
-import { RiSafe2Line } from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
 import './Dashboard.css';
 import TransferMoney from './TransferMoney';

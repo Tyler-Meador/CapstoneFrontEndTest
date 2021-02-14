@@ -54,8 +54,7 @@ function Navbar({loginStatus, test, userLoaded, logout, userLogout}) {
                 <div className='navbar-container container'>
                     <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
 
-                        <AiTwotoneBank className= 'navbar-icon' />
-                        Merit Bank
+                        <img src='images/Flogo_NavBar.png' className="img-top" />
 
                     </Link>
                     <div className='menu-icon' onClick={ handleClick } >

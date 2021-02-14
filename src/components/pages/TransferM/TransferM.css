@@ -1,0 +1,350 @@
+.LeftSidePayment{
+    width: 0x;
+    padding: 100px;
+}
+
+
+
+.RadioButtonList
+{
+  vertical-align:super;  
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 300;
+  color: #131313;
+}
+
+
+
+
+.RadioButtonList li{
+  color:#323232;
+  font-size: 20px;
+  list-style: none;
+  
+  width: 90px;
+  margin-left: 50px;
+}
+
+
+.testingbox{
+ width: 400px;
+ height: 400px;
+ background-color: #ff0844;
+ margin-top: 50px;
+}
+
+
+
+
+
+.account_dropdown{
+  width: 400px;
+  font-weight: 100;
+  font-size: 20px;
+  color:#093c01;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 50px;
+}
+
+
+
+.account_dropdown2{
+  width: 400px;
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: 800;
+  color:#093c01;
+  align-content: center;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 50px;
+}
+
+
+
+#outside{
+  width: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  align-content: center;
+  text-align: center;
+  
+  
+}
+
+
+
+
+
+#outside t1 {
+  background-color: #12fabc;
+}
+
+
+.services__card p{
+  font-size: small;
+  font-style: italic;
+  color: rgb(174, 174, 174);
+  margin-bottom: 1%;
+
+}
+
+
+.services__card h2{
+  font-size: 40px;
+  font-weight: bolder;
+  font-style: italic;
+  color: rgb(65, 65, 65);
+  margin-bottom: 10px;
+
+}
+
+
+
+
+/* Services Section */
+.services {
+  background: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 60px;
+}
+
+.services h1 {
+  background-color: #ff8177;
+  background-image: linear-gradient(to right, #bcbcbc 0%, #878787 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width:80%;
+  
+}
+
+.flex h4{
+  font-size: 20px;
+  color:rgb(184, 180, 180);
+  font-style: italic;
+  margin-top:-2%;
+  margin-left: 15%;
+}
+
+
+.auto h4{
+  font-size: 4px;
+  color:rgb(184, 180, 180);
+  font-style: italic;
+  margin-left: 140px;
+}
+
+#moneyB{
+  width: 500px;
+  height: 200px;
+  box-shadow: #131313;
+  align-items: center;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  box-shadow: 5px 10px 20px rgb(0, 0, 0) inset;
+  background-image: linear-gradient(to top, #5e5e5e 0%, #373737 100%);
+}
+
+
+#moneyB h2{
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+
+.moneybox{
+  width: 100px;
+  height: 100px;
+  background-color: #0c0680;
+}
+
+
+
+
+
+
+
+#moneyB2{
+  width: 400px;
+  height: 100px;
+  box-shadow: #131313;
+  align-items: center;
+  border-radius: 30px;
+  padding-top: 15px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  box-shadow: 5px 10px 20px rgb(0, 0, 0) inset;
+  background-image: linear-gradient(to top, #7d7a7a 0%, #575656 100%);
+}
+
+
+#moneyB2 h2{
+  padding: 20px;
+  color: rgb(49, 223, 22);
+  align-items: center;
+}
+
+
+.moneybox2{
+  width: 100px;
+  height: 100px;
+  background-color: #0c0680;
+}
+
+
+
+
+
+.services__card {
+  
+  height: 825px;
+  width: 600px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #093c01;
+  align-items: center;
+  margin-left: 70%;
+  
+  
+  background: linear-gradient(
+    to bottom,
+    #76febc,
+    #7bf7a6,
+    #068074
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*background-image: linear-gradient(to right, #a6f47f 0%, #68fff0 100%); */
+.services__card:nth-child(2) {
+  background: #1fa2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1cf978,
+    #12fabc,
+    #f81fff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(
+    -225deg,
+    #1bc9af 0%,
+    #29c883 29%,
+    #13ff8d 67%,
+    #adeb6e 100%
+  );
+}
+
+.currency{
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  margin-left: 30px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+.services__card h2 {
+  text-align: center;
+}
+
+.services__card img {
+    width: 50%;
+    height: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+  
+
+.services__card p {
+  text-align: center;
+  margin-top: 1%;
+  font-size: 20px;
+  color: rgb(196, 196, 196);
+
+}
+
+.services__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.services__card button {
+  color: #fff;
+  padding: 14px 24px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #093c01;
+  font-size: 1rem;
+}
+
+.services__card button:hover {
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  .services__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.radiotext {
+  margin: 10px 10px 0px 0px;
+}

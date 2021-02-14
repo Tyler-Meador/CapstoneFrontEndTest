@@ -1,18 +1,19 @@
-import React from 'react'
-import TransferM from '../TransferM/TransferM'
+import React, { useEffect } from 'react'
 import Sidebar from '../../Sidebar/Sidebar';
 import '../../pages/Dashboard/Dashboard.css';
-import CardGroup from 'react-bootstrap/CardGroup';
-import Card from 'react-bootstrap/Card';
 import '../Checking/CheckingDetails.css';
 import { Link } from 'react-router-dom';
-import DashboardElements from '../../pages/Dashboard/DashboardElements';
 import { connect } from 'react-redux'
+import "../TransferM/TransferM.css";
+import NumberFormat from 'react-number-format';
 
-import ReactPlayer from 'react-player'
 
+function CheckingDetails({user, checkingBalance, dbaBalance}) {
 
-function CheckingDetails({user, balance}) {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    });
+
     return (
         <>
 
@@ -44,15 +45,32 @@ function CheckingDetails({user, balance}) {
                             Merit Bank AdvantagePlus Banking®
                         </p>
                         <p className="Top-card-text">
-                            A good choice if you use direct deposit and want a straightforward banking account
+                            No minimums, no fees, no worries. Access to 16,000 ATMs and more than 4,700 branches
                         </p>
                     </div>
                 </div>
             </div>
 
-            <Link to="/transfermoney" >
-                <button className="Transbtn">Transfer Money</button>
-            </Link>
+            <ul className="ListCards">
+
+                <li className="cards_item">
+                    <div className="CLEARcard_content"></div>
+                </li>
+                
+
+                <Link to="/transfermoney">
+                    <div className="money-box2">
+                        
+                        <form id="moneyB2" action="" method="">
+                            <h2 className="card_title">TRANSFER MONEY</h2>
+                            
+                        </form>
+                    </div>
+                </Link>
+                
+
+            
+            </ul>
 
 
             <ul className='ListCards'>
@@ -64,14 +82,12 @@ function CheckingDetails({user, balance}) {
 
                 <li className="cards_item">
                     <div className="card_content">
-                        <h2 className="card_title">Checking Balance</h2>
-                        <p className="card_text2">${balance}</p>
+                        <h2 className="card_title">Personal Checking Balance</h2>
+                        <p className="card_text2"><NumberFormat value={checkingBalance} decimalScale={2} fixedDecimalScale={true} displayType={'text'} thousandSeparator={true} prefix={'$'}/></p>
                         <p className="card_text">Available Funds</p>
 
                     </div>
                 </li>
-
-
 
             </ul>
 
@@ -114,8 +130,53 @@ function CheckingDetails({user, balance}) {
 
                     </tbody>
                 </table>
+            </div>
+            <ul className="ListCards">
+                <li className="cards_item">
+                    <div className="CLEARcard_content"></div>
+                </li>
 
+                <li className="cards_item">
+                    <div className="card_content">
+                    <h2 className="card_title">DBA Checking Balance</h2>
+                    <p className="card_text2"><NumberFormat value={dbaBalance} decimalScale={2} fixedDecimalScale={true} displayType={'text'} thousandSeparator={true} prefix={'$'}/></p>
+                    <p className="card_text">Available Funds</p>
+                    </div>
+                </li>
+            </ul>
 
+            <div className="transctions">
+                <h2>DBA Checking Transaction Activity</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>FROM</th>
+                        <th>TO</th>
+                        <th>AMOUNT</th>
+                        <th>DATE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td data-column="FROM">Checking</td>
+                        <td data-column="TO">Savings</td>
+                        <td data-column="AMOUNT">$15,800</td>
+                        <td data-column="DATE">02/13/2021</td>
+                    </tr>
+                    <tr>
+                        <td data-column="FROM">Checking</td>
+                        <td data-column="TO">Savings</td>
+                        <td data-column="AMOUNT">$70</td>
+                        <td data-column="DATE">02/08/2021</td>
+                    </tr>
+                    <tr>
+                        <td data-column="FROM">Checking</td>
+                        <td data-column="TO">Savings</td>
+                        <td data-column="AMOUNT">$450</td>
+                        <td data-column="DATE">01/30/2021</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
 
         </>
@@ -124,7 +185,8 @@ function CheckingDetails({user, balance}) {
 const mapStateToProps = state => {
     return {
         user: state.User.user,
-        balance: state.Checking.balance
+        checkingBalance: state.Checking.balance,
+        dbaBalance: state.DBA.balance
     }
   }
   

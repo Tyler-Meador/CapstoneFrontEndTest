@@ -10,7 +10,7 @@ import SubMenu from './SubMenu';
 
 const Nav = styled.div`
     background: #15171c;
-    height: 50px;
+    height: 60px;
     
     display: flex;
     justify-content: flex-start;
@@ -23,7 +23,7 @@ const SidebarNav = styled.nav`
     background: #15171c;
     width: 250px;
     
-    margin-top: 420px;
+    margin-top: 20%;
     display: flex;
     justify-content: center;
     position: fixed;

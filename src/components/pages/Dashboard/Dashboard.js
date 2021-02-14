@@ -1,24 +1,20 @@
-//import React from 'react'
-import HeroSection from '../../HeroSection'
-import Pricing from '../../Pricing';
+
 import DashboardElements from '../../pages/Dashboard/DashboardElements';
 import './Dashboard.css';
-import { Link } from "react-router-dom";
-import Video from '../Dashboard/Video';
-import React, { Component } from 'react'
-import ReactPlayer from 'react-player'
-import DashboardTop from './DashboardTop';
+import React, { Component, useLayoutEffect } from 'react'
 import DashboardAccounts from './DashboardAccounts';
-import DashboardBottom from './DashboardBottom';
-import TransferMoney from './TransferMoney';
-import CardGroup from 'react-bootstrap/CardGroup';
-import Card from 'react-bootstrap/Card';
 import Sidebar from '../../Sidebar/Sidebar';
 
 //*******THIS DISPLAYS THE DASHBOARD COMPONENTS*******
 
 
+
 function Dashboard() {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0,0)
+    });
+
     return (
         <>
 

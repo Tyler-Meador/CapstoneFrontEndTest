@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from '../../HeroSection'
-import DashboardElements from '../Dashboard/DashboardElements'
 //pulling data properties 
 import { homeObjOne, homeObjTwo, homeObjThree } from './Data'
 //import Pricing from '../../Pricing';
@@ -8,6 +7,10 @@ import Video from '../Dashboard/Video'
 
 
 function Home() {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    });
 
     return (
         <>

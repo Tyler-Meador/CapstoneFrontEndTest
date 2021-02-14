@@ -2,7 +2,7 @@ import { FETCH_Checking_FAILURE, FETCH_Checking_REQUEST, FETCH_Checking_SUCCESS 
 
 const initialState = {
     loading: false,
-    checkingBalance: 10,
+    balance: 0.00,
     error: ''
 }
 

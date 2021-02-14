@@ -1,13 +1,18 @@
-import React from 'react'
-import errorPage from '../errorPage/errorPage'
+import React, { useEffect } from 'react'
 import Sidebar from '../../Sidebar/Sidebar';
 import '../Checking/CheckingDetails.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
+import NumberFormat from 'react-number-format';
 
 
 
 function SavingDetails({user, balance}) {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    });
+
     return (
         <>
 
@@ -41,17 +46,34 @@ function SavingDetails({user, balance}) {
                             Merit Bank AdvantagePlus Banking®
 </p>
                         <p className="Top-card-text">
-                            A good choice if you use direct deposit and want a straightforward banking account
-</p>
+                        The high-yield Online Savings Account you deserve. Our award-winning savings account provides a rate that’s 4X the National Average.</p>
                     </div>
                 </div>
             </div>
 
 
+            <ul className="ListCards">
 
-            <Link to="/transfermoney" >
-                <button className="Transbtn">Transfer Money</button>
-            </Link>
+                <li className="cards_item">
+                    <div className="CLEARcard_content"></div>
+                </li>
+
+
+                <Link to="/transfermoney">
+                    <div className="money-box2">
+
+                        <form id="moneyB2" action="" method="">
+                            
+                            <h2 className="card_title">TRANSFER MONEY</h2>
+
+                        </form>
+                    </div>
+                </Link>
+
+
+
+            </ul>
+
 
 
             <ul className='ListCards'>
@@ -64,7 +86,7 @@ function SavingDetails({user, balance}) {
                 <li className="cards_item">
                     <div className="card_content">
                         <h2 className="card_title">Savings Balance</h2>
-                        <p className="card_text2">${balance}</p>
+                        <p className="card_text2"><NumberFormat value={balance} decimalScale={2} fixedDecimalScale={true} displayType={'text'} thousandSeparator={true} prefix={'$'}/></p>
                         <p className="card_text">Available Funds</p>
 
                     </div>

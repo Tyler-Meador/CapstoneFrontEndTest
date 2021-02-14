@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
 import '../Checking/CheckingDetails.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
+import NumberFormat from 'react-number-format';
 
 function CDDetails({user, balance}) {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    });
+
     return (
 
         <>
@@ -17,8 +23,8 @@ function CDDetails({user, balance}) {
                 <div className='HeroContent'>
 
                     <h1 className='HeroH1'>
-                        MERIT BANK CD
-                </h1>
+                        MERIT BANK CERTIFICATE OF DEPOSIT 
+                    </h1>
 
                 </div>
             </div>
@@ -33,12 +39,12 @@ function CDDetails({user, balance}) {
                 <div class="card">
                     <img src='images/undraw_Invest_re_8jl5.svg' class="card-img-top" />
                     <div class="card-body">
-                        <h1 className="Top-card-title">{user.firstName}'s CD Account Details</h1>
+                        <h1 className="Top-card-title">{user.firstName}'s Certificate of Deposit Account Details</h1>
                         <p className="Top-card-text">
                             Merit Bank AdvantagePlus Banking®
         </p>
                         <p className="Top-card-text">
-                            A good choice if you use direct deposit and want a straightforward banking account
+                        Looking for a slightly longer term—and slightly higher rate? Because extraordinary is always within reach.
         </p>
                     </div>
                 </div>
@@ -50,10 +56,27 @@ function CDDetails({user, balance}) {
 
 
 
+            <ul className="ListCards">
 
-            <Link to="/transfermoney" >
-                <button className="Transbtn">Transfer Money</button>
-            </Link>
+                <li className="cards_item">
+                    <div className="CLEARcard_content"></div>
+                </li>
+
+
+                <Link to="/transfermoney">
+                    <div className="money-box2">
+
+                        <form id="moneyB2" action="" method="">
+                            
+                            <h2 className="card_title">TRANSFER MONEY</h2>
+
+                        </form>
+                    </div>
+                </Link>
+
+
+
+            </ul>
 
 
             <ul className='ListCards'>
@@ -66,7 +89,7 @@ function CDDetails({user, balance}) {
                 <li className="cards_item">
                     <div className="card_content">
                         <h2 className="card_title">CD Balance</h2>
-                        <p className="card_text2">${balance}</p>
+                        <p className="card_text2"><NumberFormat value={balance} decimalScale={2} fixedDecimalScale={true} displayType={'text'} thousandSeparator={true} prefix={'$'}/></p>
                         <p className="card_text">Locked Funds</p>
 
                     </div>

@@ -23,14 +23,14 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router >
           <Navbar />
             <Switch>
               <Route path='/' exact component={ Home }/>
               <Route path='/services' component={ Services }/>
               <Route path='/products' component={ Products }/>
               <Route path='/login' component={ Login }/>
-              <Route path='/dashboard' component={ Dashboard }/>
+              <Route path='/dashboard' component={ Dashboard } />
               <Route path='/checking' component={ CheckingDetails }/>
               <Route path='/savings' component={ SavingDetails }/>
               <Route path='/cdaccount' component={ CDDetails }/>

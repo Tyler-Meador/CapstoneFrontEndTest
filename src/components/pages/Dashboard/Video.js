@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactPlayer from "react-player";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import { Button } from "../../Button";
