@@ -13,7 +13,7 @@ export default function validateInfo(values) {
 // if no value it will say email required 
 //if value is not in the right format then it will say INVALID
     if(!values.username) {
-        errors.username = "Email required"
+        errors.username = "Username required"
     } else if(values.username.length < 6) {
         errors.username = "Username needs to be 6 characters or more"
     }

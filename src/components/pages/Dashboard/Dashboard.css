@@ -107,7 +107,7 @@
 
 
 .Top-card-title {
-    color: #00630f;
+    color: #3a3a3a;
     margin-top: 10px;
     font-size: 40px;
     text-align: center;
@@ -117,7 +117,7 @@
 
 
 .Top-card-text{
-    color: #00630f;
+    color: #3a3a3a;
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 24px;
@@ -452,16 +452,13 @@
     flex-wrap: wrap;
     list-style: none;
     margin-left: 10%;
-    padding: 1%;
+    padding: 10px;
     align-items: center;
 }
 
 
 
-.cards_item {
-  text-decoration: none;
-    
-}
+
 
 
 
@@ -512,6 +509,8 @@
     border-radius: 20px;
 }
 
+
+
 .card_content2 {
     padding: 20px;
     margin: 30px;
@@ -526,13 +525,30 @@
 }
 
 
+
+
+
+.cards_item{
+    text-decoration: none;
+    
+}
+
+
+.card_content2 h2 {
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgb(0, 167, 53);
+}
+
+
+
 .card_content {
     padding: 20px;
     margin: 30px;
     width:400px;
+    box-shadow: 5px 10px 20px rgb(0 0 0) inset;
+    background: linear-gradient(to bottom left, #2bd176 40%, #32e2c2 100%);
     
-    background: linear-gradient(to bottom left, #e9e7e7 40%, #cecdcd 100%);
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
 
@@ -544,19 +560,20 @@
 
 
 .card_title {
-    color: #3e3e3e;
+    color: #0c0c0c;
     font-size: 25px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: capitalize;
-    margin: 0px;
+    margin-top: 5px;
+    
 }
 
 .card_text {
-    color: #545353;
-    font-size: 0.875rem;
+    color: #282727;
+    font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 1.25rem;    
+    margin-bottom: 2px;    
     font-weight: 400;
 }
 
@@ -570,12 +587,13 @@
 
 
 .card_text2 {
-    color: #2d9103;
-    font-size: 45px;
+    color: #282828;
+    font-size: 50px;
     line-height: 1.5;
     margin-top: 1.25rem;
     margin-bottom: 1rem;    
-    font-weight: 400;
+    font-weight:bolder;
+    
 }
 
 
@@ -590,13 +608,13 @@
 
 
 
-
-
 .card2 {
     flex-direction: row;
     align-items: center;
     background-color: transparent;
 }
+
+
 
 
 .card {

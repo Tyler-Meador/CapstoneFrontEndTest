@@ -1,5 +1,5 @@
 
-import { FETCH_TRANSACTION_FAILURE, FETCH_TRANSACTION_REQUEST, FETCH_TRANSACTION_SUCCESS } from "./TransactionTypes"
+import { FETCH_TRANSACTION_FAILURE, FETCH_TRANSACTION_REQUEST, FETCH_TRANSACTION_SUCCESS, LOADING } from "./TransactionTypes"
 
 const initialState = {
     success: null,

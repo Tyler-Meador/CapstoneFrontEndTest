@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Sidebar from '../../Sidebar/Sidebar';
 import '../Checking/CheckingDetails.css';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import NumberFormat from 'react-number-format';
+import HistoryCard from '../Checking/HistoryCard'
 
 
 
@@ -12,6 +12,15 @@ function SavingDetails({user, balance}) {
     useEffect(() => {
         window.scrollTo(0,0)
     });
+
+
+    const savingsHistory = user.savingsAccount[0].transactions.slice(-10).map(account => {
+
+        if(account.transactionSuccess === true){
+                return <HistoryCard key={account.id} sourceAccount={account.sourceAccount} targetAccount={account.targetAccount} amount={account.amount}/>
+        }
+
+    })
 
     return (
         <>
@@ -43,8 +52,7 @@ function SavingDetails({user, balance}) {
                     <div class="card-body">
                         <h1 className="Top-card-title">{user.firstName}'s Savings Account Details</h1>
                         <p className="Top-card-text">
-                            Merit Bank AdvantagePlus Banking®
-</p>
+                            Merit Bank AdvantagePlus Banking®</p>
                         <p className="Top-card-text">
                         The high-yield Online Savings Account you deserve. Our award-winning savings account provides a rate that’s 4X the National Average.</p>
                     </div>
@@ -52,27 +60,6 @@ function SavingDetails({user, balance}) {
             </div>
 
 
-            <ul className="ListCards">
-
-                <li className="cards_item">
-                    <div className="CLEARcard_content"></div>
-                </li>
-
-
-                <Link to="/transfermoney">
-                    <div className="money-box2">
-
-                        <form id="moneyB2" action="" method="">
-                            
-                            <h2 className="card_title">TRANSFER MONEY</h2>
-
-                        </form>
-                    </div>
-                </Link>
-
-
-
-            </ul>
 
 
 
@@ -110,30 +97,10 @@ function SavingDetails({user, balance}) {
                             <th>FROM</th>
                             <th>TO</th>
                             <th>AMOUNT</th>
-                            <th>DATE</th>
+
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Checking</td>
-                            <td data-column="AMOUNT">$700</td>
-                            <td data-column="DATE">02/03/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Checking</td>
-                            <td data-column="AMOUNT">$8950</td>
-                            <td data-column="DATE">02/05/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Checking</td>
-                            <td data-column="AMOUNT">$1300</td>
-                            <td data-column="DATE">02/07/2021</td>
-                        </tr>
-
-                    </tbody>
+                {savingsHistory.reverse()}
                 </table>
 
 

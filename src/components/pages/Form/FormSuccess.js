@@ -2,7 +2,6 @@ import React from 'react';
 import './Form.css';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
-import { fetchToken } from '../../../redux/Login/LoginActions'
 import { fetchUser } from '../../../redux/User/UserActions';
 
 

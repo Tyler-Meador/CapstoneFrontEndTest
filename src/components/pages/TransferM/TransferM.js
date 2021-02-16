@@ -4,7 +4,7 @@ import Sidebar from '../../Sidebar/Sidebar';
 import '../TransferM/TransferM.css';
 import { FormGroup, Label, InputGroup, InputGroupAddon, InputGroupText, Button, Input } from 'reactstrap';
 import { connect } from 'react-redux'
-import { fetchTransaction } from '../../../redux/Transaction/TransactionActions';
+import { fetchTransaction} from '../../../redux/Transaction/TransactionActions';
 
 
 
@@ -17,6 +17,8 @@ function TransferM({fetchTransaction, user, token, error, loading, success, chec
         targetAccount: 0,
         amount: 0
     });
+
+
 
 
     function filterTo(e){
@@ -204,8 +206,8 @@ function TransferM({fetchTransaction, user, token, error, loading, success, chec
               <button  onClick={handleSubmit}>TRANSFER SECURELY</button>
             </div>
             {loading &&(<p>Loading....</p>)}
-            {success &&(<p>Transfer Success!!</p>)}
-            {error &&(<p>{error}</p>)}
+            {!loading &&(success &&(<p>Transfer Success!!</p>))}
+            {!loading &&(error &&(<p>{error}</p>))}
             <h4 className="auto">Set up an automatic payment for this account</h4>
           </div>
           
@@ -235,7 +237,7 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-        fetchTransaction: (transaction, token) => dispatch(fetchTransaction(transaction, token)),
+        fetchTransaction: (transaction, token) => dispatch(fetchTransaction(transaction, token))
     }
   }
   

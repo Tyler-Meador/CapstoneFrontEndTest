@@ -30,7 +30,7 @@ const { handleChange, values, handleSubmit, errors } = useForm(submitForm, valid
 
                 <div className='form-inputs'>
                     <label htmlFor='email' className='form-label'>
-                        Username/Email
+                        Username
                         </label>
                     <input
                         id='username'

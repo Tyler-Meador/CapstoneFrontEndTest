@@ -17,7 +17,8 @@ import TransferM from "./components/pages/TransferM/TransferM";
 import Profile from "./components/pages/Profile/Profile";
 import Logout from "./components/pages/Logout/Logout";
 import store from './redux/store'
-//import Form from './components/pages/Form/FormSignup';
+import CreateAccount from "./components/pages/CreateAccount/CreateAccount";
+
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
               <Route path='/transfermoney' component={ TransferM }/>
               <Route path='/profile' component={ Profile }/>
               <Route path='/logout' component={ Logout }/>
+              <Route path='/createaccount' component={ CreateAccount }/>
             </Switch>
             <Footer />
       </Router>

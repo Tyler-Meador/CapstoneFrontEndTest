@@ -1,4 +1,4 @@
-import { FETCH_TRANSACTION_FAILURE, FETCH_TRANSACTION_REQUEST, FETCH_TRANSACTION_SUCCESS } from "./TransactionTypes"
+import { FETCH_TRANSACTION_FAILURE, FETCH_TRANSACTION_REQUEST, FETCH_TRANSACTION_SUCCESS, LOADING } from "./TransactionTypes"
 
 export const fetchTransactionRequest = () => {
     return{
@@ -19,6 +19,7 @@ const fetchTransactionFailure = error => {
         payload: error
     }
 }
+
 
 export const fetchTransaction = (transaction, token) => {
     return dispatch => {

@@ -4,6 +4,7 @@ import '../Checking/CheckingDetails.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import NumberFormat from 'react-number-format';
+import HistoryCard from '../Checking/HistoryCard'
 
 
 function IRADetails({rothBalance, regBalance, rollBalance, user}) {
@@ -11,6 +12,32 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
     useEffect(() => {
         window.scrollTo(0,0)
     });
+
+    const rothHistory = user.rothIRA[0].transactions.slice(-10).map(account => {
+
+        if(account.transactionSuccess === true){
+                return <HistoryCard key={account.id} sourceAccount={account.sourceAccount} targetAccount={account.targetAccount} amount={account.amount}/>
+        }
+
+    })
+
+    const regHistory = user.regularIRA[0].transactions.slice(-10).map(account => {
+
+        if(account.transactionSuccess === true){
+                return <HistoryCard key={account.id} sourceAccount={account.sourceAccount} targetAccount={account.targetAccount} amount={account.amount}/>
+        }
+
+    })
+
+    const rollHistory = user.rolloverIRA[0].transactions.slice(-10).map(account => {
+
+        if(account.transactionSuccess === true){
+                return <HistoryCard key={account.id} sourceAccount={account.sourceAccount} targetAccount={account.targetAccount} amount={account.amount}/>
+        }
+
+    })
+
+
 
     return (
 
@@ -42,37 +69,14 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
                     <div class="card-body">
                         <h1 className="Top-card-title">{user.firstName}'s IRA Account Details</h1>
                         <p className="Top-card-text">
-                            Merit Bank AdvantagePlus Banking®
-        </p>
+                            Merit Bank AdvantagePlus Banking®</p>
                         <p className="Top-card-text">
                         Choose from a wide variety of investment products.
-                            Refine your retirement strategy with innovative tools and calculators
-        </p>
+                            Refine your retirement strategy with innovative tools and calculators</p>
                     </div>
                 </div>
             </div>
 
-
-            <ul className="ListCards">
-
-                <li className="cards_item">
-                    <div className="CLEARcard_content"></div>
-                </li>
-
-
-                <Link to="/transfermoney">
-                    <div className="money-box2">
-
-                        <form id="moneyB2" action="" method="">
-                            <h2 className="card_title">TRANSFER MONEY</h2>
-
-                        </form>
-                    </div>
-                </Link>
-
-
-
-            </ul>
 
 
             <ul className='ListCards'>
@@ -101,7 +105,7 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
 
 
             <div className='transctions'>
-                <h2>CD TRANSACTION ACTIVITY</h2>
+                <h2>REGULAR IRA TRANSACTION ACTIVITY</h2>
                 <table>
 
                     <thead>
@@ -109,34 +113,9 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
                             <th>FROM</th>
                             <th>TO</th>
                             <th>AMOUNT</th>
-                            <th>INTEREST RATE</th>
-                            <th>DATE</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">IRA</td>
-                            <td data-column="AMOUNT">$1000</td>
-                            <td data-column="INTEREST RATE">20%</td>
-                            <td data-column="DATE">02/03/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Checking</td>
-                            <td data-column="TO">IRA</td>
-                            <td data-column="AMOUNT">$2000</td>
-                            <td data-column="INTEREST RATE">5%</td>
-                            <td data-column="DATE">02/06/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">IRA</td>
-                            <td data-column="AMOUNT">$5000</td>
-                            <td data-column="INTEREST RATE">10%</td>
-                            <td data-column="DATE">02/09/2021</td>
-                        </tr>
-
-                    </tbody>
+                {regHistory.reverse()}
                 </table>
 
 
@@ -170,34 +149,9 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
                             <th>FROM</th>
                             <th>TO</th>
                             <th>AMOUNT</th>
-                            <th>INTEREST RATE</th>
-                            <th>DATE</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Rollover IRA</td>
-                            <td data-column="AMOUNT">$1000</td>
-                            <td data-column="INTEREST RATE">20%</td>
-                            <td data-column="DATE">02/03/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Rollover IRA</td>
-                            <td data-column="AMOUNT">$1000</td>
-                            <td data-column="INTEREST RATE">5%</td>
-                            <td data-column="DATE">02/02/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Rollover IRA</td>
-                            <td data-column="AMOUNT">$500</td>
-                            <td data-column="INTEREST RATE">10%</td>
-                            <td data-column="DATE">02/01/2021</td>
-                        </tr>
-
-                    </tbody>
+                {rollHistory.reverse()}
                 </table>
 
 
@@ -231,34 +185,9 @@ function IRADetails({rothBalance, regBalance, rollBalance, user}) {
                             <th>FROM</th>
                             <th>TO</th>
                             <th>AMOUNT</th>
-                            <th>INTEREST RATE</th>
-                            <th>DATE</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Roth IRA</td>
-                            <td data-column="AMOUNT">$100</td>
-                            <td data-column="INTEREST RATE">20%</td>
-                            <td data-column="DATE">02/07/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Checking</td>
-                            <td data-column="TO">Roth IRA</td>
-                            <td data-column="AMOUNT">$400</td>
-                            <td data-column="INTEREST RATE">5%</td>
-                            <td data-column="DATE">01/23/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Savings</td>
-                            <td data-column="TO">Roth IRA</td>
-                            <td data-column="AMOUNT">$500</td>
-                            <td data-column="INTEREST RATE">10%</td>
-                            <td data-column="DATE">12/29/2020</td>
-                        </tr>
-
-                    </tbody>
+                {rothHistory.reverse()}
                 </table>
 
 

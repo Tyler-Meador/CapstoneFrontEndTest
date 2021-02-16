@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import Sidebar from '../../Sidebar/Sidebar';
 import '../../pages/Dashboard/Dashboard.css';
 import '../Checking/CheckingDetails.css';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import "../TransferM/TransferM.css";
 import NumberFormat from 'react-number-format';
+import HistoryCard from './HistoryCard';
 
 
 function CheckingDetails({user, checkingBalance, dbaBalance}) {
@@ -13,6 +13,26 @@ function CheckingDetails({user, checkingBalance, dbaBalance}) {
     useEffect(() => {
         window.scrollTo(0,0)
     });
+
+    
+    const checkingHistory = user.checkingAccounts[0].transactions.map(account => {
+        if(account.transactionSuccess === true){
+                return (
+
+                    <HistoryCard key={account.id} sourceAccount={account.sourceAccount} targetAccount={account.targetAccount} amount={account.amount}/>
+                );
+        }
+
+    })
+
+
+    const dbaHistory = user.dbacheckingAccounts[0].transactions.map(test => {
+        if(test.transactionSuccess === true){
+
+            return <HistoryCard key={test.id} sourceAccount={test.sourceAccount} targetAccount={test.targetAccount} amount={test.amount}/>
+        }
+
+    })
 
     return (
         <>
@@ -47,36 +67,20 @@ function CheckingDetails({user, checkingBalance, dbaBalance}) {
                         <p className="Top-card-text">
                             No minimums, no fees, no worries. Access to 16,000 ATMs and more than 4,700 branches
                         </p>
+                        <h2 className="IRAwarning">
+                            When closing the checking account,
+                        </h2>
+                        <h2 className="IRAwarning">
+                             the balance has to be transferred to the savings account only
+                        </h2>
                     </div>
                 </div>
             </div>
 
-            <ul className="ListCards">
-
-                <li className="cards_item">
-                    <div className="CLEARcard_content"></div>
-                </li>
-                
-
-                <Link to="/transfermoney">
-                    <div className="money-box2">
-                        
-                        <form id="moneyB2" action="" method="">
-                            <h2 className="card_title">TRANSFER MONEY</h2>
-                            
-                        </form>
-                    </div>
-                </Link>
-                
-
-            
-            </ul>
-
 
             <ul className='ListCards'>
                 <li className="cards_item">
-                    <div className="CLEARcard_content">
-                    </div>
+                    <div className="CLEARcard_content"></div>
                 </li>
 
 
@@ -105,30 +109,9 @@ function CheckingDetails({user, checkingBalance, dbaBalance}) {
                             <th>FROM</th>
                             <th>TO</th>
                             <th>AMOUNT</th>
-                            <th>DATE</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td data-column="FROM">Checking</td>
-                            <td data-column="TO">Savings</td>
-                            <td data-column="AMOUNT">$2000</td>
-                            <td data-column="DATE">02/03/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Checking</td>
-                            <td data-column="TO">Savings</td>
-                            <td data-column="AMOUNT">$850</td>
-                            <td data-column="DATE">02/05/2021</td>
-                        </tr>
-                        <tr>
-                            <td data-column="FROM">Checking</td>
-                            <td data-column="TO">Savings</td>
-                            <td data-column="AMOUNT">$500</td>
-                            <td data-column="DATE">02/07/2021</td>
-                        </tr>
-
-                    </tbody>
+                    {checkingHistory.slice(-10)}
                 </table>
             </div>
             <ul className="ListCards">
@@ -153,29 +136,9 @@ function CheckingDetails({user, checkingBalance, dbaBalance}) {
                         <th>FROM</th>
                         <th>TO</th>
                         <th>AMOUNT</th>
-                        <th>DATE</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td data-column="FROM">Checking</td>
-                        <td data-column="TO">Savings</td>
-                        <td data-column="AMOUNT">$15,800</td>
-                        <td data-column="DATE">02/13/2021</td>
-                    </tr>
-                    <tr>
-                        <td data-column="FROM">Checking</td>
-                        <td data-column="TO">Savings</td>
-                        <td data-column="AMOUNT">$70</td>
-                        <td data-column="DATE">02/08/2021</td>
-                    </tr>
-                    <tr>
-                        <td data-column="FROM">Checking</td>
-                        <td data-column="TO">Savings</td>
-                        <td data-column="AMOUNT">$450</td>
-                        <td data-column="DATE">01/30/2021</td>
-                    </tr>
-                    </tbody>
+                {dbaHistory.slice(-10)}
                 </table>
             </div>
 
